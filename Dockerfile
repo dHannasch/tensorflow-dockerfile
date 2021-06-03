@@ -13,8 +13,6 @@ ADD $ETC_ENVIRONMENT_LOCATION ./environment.sh
 ADD $FIX_ALL_GOTCHAS_SCRIPT_LOCATION .
 ADD $CLEANUP_SCRIPT_LOCATION .
 
-COPY torchvision/datasets/utils.py .
-
 RUN set -o allexport \
     && . ./fix_all_gotchas.sh \
     && set +o allexport \
