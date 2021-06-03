@@ -16,7 +16,7 @@ ADD $CLEANUP_SCRIPT_LOCATION .
 RUN set -o allexport \
     && . ./fix_all_gotchas.sh \
     && set +o allexport \
-    && apt-get install wget python3-pip \
+    && apt-get install --assume-yes wget python3-pip \
     && python --version \
     && python3 --version \
     && python -c "import tensorflow" \
